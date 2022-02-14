@@ -43,7 +43,7 @@ namespace OnlineShop2022.Areas.Admin.Controllers
         {
             var user = await _userManager.FindByIdAsync(id);
 
-            if (user == null)
+            if (user != null)
             {
                 return RedirectToAction("Index");
             }

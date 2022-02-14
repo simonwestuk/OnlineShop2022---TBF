@@ -31,6 +31,8 @@ namespace OnlineShop2022.Areas.Admin
         // GET: Admin/Category/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            return NotFound();
+
             if (id == null)
             {
                 return NotFound();
@@ -81,7 +83,7 @@ namespace OnlineShop2022.Areas.Admin
             {
                 return NotFound();
             }
-            return View(categoryModel);
+            return View();
         }
 
         // POST: Admin/Category/Edit/5
